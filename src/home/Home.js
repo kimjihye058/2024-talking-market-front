@@ -17,7 +17,7 @@ const Home = () => {
             </header>
             <div className="voice1">
                 <img src="/images/voice.png" onClick={handleVoiceClick} />
-                <span className="homevoice">아이콘을 클릭해 주세요</span>
+                <span className="homevoice1">아이콘을 클릭해 주세요</span>
             </div>
         </div>
         
