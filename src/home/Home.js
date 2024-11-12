@@ -7,7 +7,7 @@ const Home = () => {
 
     // 클릭 시 Voice 페이지로 이동하는 함수
     const handleVoiceClick = () => {
-        navigate("/voice");
+        navigate("/order");
     };
     
     return(
