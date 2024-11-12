@@ -1,0 +1,44 @@
+.title_div {
+    text-align: center;
+    height: 80px;
+    border-bottom: 2px solid #ADC178;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#title_text {
+    font-size: 35px;
+    color: #604E43;
+}
+
+#coice_text1 {
+    font-size: 25px;
+    color: #40200F;
+    text-align: center;
+    margin: 27px auto 0;
+}
+
+.dropdown {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+}
+
+#product_img {
+    width: 90px;
+    height: 96px;
+    object-fit: cover;
+    margin-left: 5%;
+}
+
+.product_div1 {
+    display: inline-flex;
+    background-color: #FFF8F3;
+    width: 90%;
+}
+
+.prduct_div2 {
+
+}
