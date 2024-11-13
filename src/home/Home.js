@@ -5,7 +5,7 @@ import "./Home.css";
 const Home = () => {
     const navigate = useNavigate();
 
-    // 클릭 시 Voice 페이지로 이동하는 함수
+    // 클릭 시 order 페이지로 이동하는 함수
     const handleVoiceClick = () => {
         navigate("/order");
     };
