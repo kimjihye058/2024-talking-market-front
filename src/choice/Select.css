@@ -15,3 +15,7 @@
     color: #40200F;
     font-size: 20px;
 }
+
+.select_btn_div {
+    display: flex;
+}
