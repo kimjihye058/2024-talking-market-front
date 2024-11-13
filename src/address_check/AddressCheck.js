@@ -1,34 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import "./AddressCheck.css";
 
-const Voice = () => {
-    const [isListening, setIsListening] = useState(false);
-
-    const handleVoiceClick = () => {
-        setIsListening(true);
-        setTimeout(() => setIsListening(false), 1000);
-    };
+const AddressCheck = () => {
 
     return (
-        <div className="Home2">
+        <div className="check">
             <header className="header2">
                 <span className="logo2">주소입력</span>
             </header>
-            <div className="voice2">
-                <div 
-                    className={`circle1 ${isListening ? "active" : ""}`} 
-                    onClick={handleVoiceClick}
-                >
-                    <div 
-                        className={`circle ${isListening ? "active" : ""}`}
-                    >
-                        <img src="/images/voice.png" alt="Voice Icon" className="voice-icon" />
-                    </div>
+            <div>
+                <p>수락 리버시티 1단지 102동 501호</p>
+            </div>
+            <div>
+                <p>이 주소가 맞나요?</p>
+            </div>
+            <div>
+                <div>
+                    <img src="/images/noBtn.png"></img>
+                    <p>아니요</p>
                 </div>
-                <span className="homevoice2">음성을 인식하고 있습니다</span>
+                <div>
+                    <img src="/images/yesBtn.png"></img>
+                    <p>네</p>
+                </div>
             </div>
         </div>
     );
 };
 
-export default Voice;
+export default AddressCheck;
