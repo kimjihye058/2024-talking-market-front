@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Pretendard-Bold'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./fonts/Pretendard-Bold.otf'); /* 폰트 파일의 위치 */
+  src: url('../public/fonts/PRETENDARD-BOLD.OTF'); /* 폰트 파일의 위치 */
 }
 @font-face {
   font-family: 'Pretendard-Medium'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./fonts/Pretendard-Medium.otf'); /* 폰트 파일의 위치 */
+  src: url('../public/fonts/PRETENDARD-MEDIUM.OTF'); /* 폰트 파일의 위치 */
 }
 @font-face {
   font-family: 'Pretendard-SemiBold'; /* 사용할 폰트의 이름을 정의 */
-  src: url('./fonts/Pretendard-SemiBold.otf'); /* 폰트 파일의 위치 */
+  src: url('../public/fonts/PRETENDARD-SEMIBOLD.OTF'); /* 폰트 파일의 위치 */
 }
 
 body {

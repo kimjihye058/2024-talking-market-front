@@ -17,6 +17,7 @@
 
 .logo2 {
     font-size: 35px;
+    font-family: Pretendard-SemiBold;
 }
 
 /* 음성 인식 섹션 스타일 */
@@ -33,6 +34,7 @@
     position: relative;
     bottom: -100px;
     font-size: 20px;
+    font-family: Pretendard-Regular;
 }
 
 /* 바깥쪽 원형*/
