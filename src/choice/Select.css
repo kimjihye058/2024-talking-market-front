@@ -4,18 +4,35 @@
     position: absolute;
     bottom: 0;
     border-top: 3px solid #90A955;
+    padding: 20px;
 }
 
 #select_title {
     color: #40200F;
+    font-family: Pretendard-SemiBold;
     font-size: 20px;
 }
 
 #select_product {
     color: #40200F;
+    font-family: Pretendard-Medium;
     font-size: 20px;
 }
 
+#select_count {
+    color: #40200F;
+    font-family: Pretendard-Medium;
+    font-size: 20px;
+}
+
+#select_price {
+    color: #40200F;
+    font-family: Pretendard-Medium;
+    font-size: 20px;
+    float: right;
+}
+
 .select_btn_div {
+    margin-top: 100px;
     display: flex;
 }
