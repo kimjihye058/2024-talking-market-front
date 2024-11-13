@@ -1,0 +1,35 @@
+.address{
+    position: relative;
+    bottom: -180px;
+}
+.address p{
+    font-size: 35px;
+    font-family: Pretendard-SemiBold;
+    text-align: center;
+}
+.checkaddress{
+    position: relative;
+    bottom: -280px;
+}
+.checkaddress p{
+    font-size: 30px;
+    font-family: Pretendard-Medium;
+    text-align: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    position: relative;
+    bottom: -300px;
+}
+
+.noBtn, .yesBtn {
+    text-align: center;
+}
+
+.noBtn p, .yesBtn p {
+    font-size: 20px;
+    font-family: Pretendard-Medium;
+    color: #40200F;
+}
