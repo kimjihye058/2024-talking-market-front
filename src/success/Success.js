@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Success.css";
 
-const Voice = () => {
-    const [isListening, setIsListening] = useState(false);
-
-    const handleVoiceClick = () => {
-        setIsListening(true);
-        setTimeout(() => setIsListening(false), 1000);
-    };
+const Success = () => {
 
     return (
         <div className="Home2">
@@ -22,4 +16,4 @@ const Voice = () => {
     );
 };
 
-export default Voice;
+export default Success;
