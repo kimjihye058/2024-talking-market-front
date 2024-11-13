@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Order.css";
 
-const Voice = () => {
+const Order = () => {
     const [isListening, setIsListening] = useState(false);
 
     const handleVoiceClick = () => {
@@ -31,4 +31,4 @@ const Voice = () => {
     );
 };
 
-export default Voice;
+export default Order;

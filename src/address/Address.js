@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Address.css";
 
-const Voice = () => {
+const Address = () => {
     const [isListening, setIsListening] = useState(false);
 
     const handleVoiceClick = () => {
@@ -31,4 +31,4 @@ const Voice = () => {
     );
 };
 
-export default Voice;
+export default Address;
