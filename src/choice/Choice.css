@@ -8,11 +8,13 @@
 }
 
 #title_text {
+    font-family: Pretendard-Bold;
     font-size: 35px;
     color: #604E43;
 }
 
 #coice_text1 {
+    font-family: Pretendard-SemiBold;
     font-size: 25px;
     color: #40200F;
     text-align: center;
@@ -51,11 +53,13 @@
 
 #product_name {
     margin: 0;
+    font-family: Pretendard-SemiBold;
     font-size: 17px;
 }
 
 #product_price {
     margin: 5px 0;
+    font-family: Pretendard-SemiBold;
     font-size: 15px;
 }
 
@@ -72,6 +76,7 @@
 }
 
 #count_text {
+    font-family: Pretendard-SemiBold;
     font-size: 13px;
     margin-left: 2px;
 }
