@@ -1,7 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./ChoiceList.css";
 
 const ChoiceList = () => {
+    const navigate = useNavigate();
+
+    const handleCancelClick = () => {
+        navigate("/choice"); // Navigate to choice.js
+    };
+
+    const handleOrderClick = () => {
+        navigate("/address"); // Navigate to address.js
+    };
 
     return (
         <div className="Home2">
@@ -9,8 +19,8 @@ const ChoiceList = () => {
                 <span className="logo2">주문확인</span>
             </header>
             <div className="buttons">
-                <button id="cancel_btn">취소하기</button>
-                <button id="r_order_btn">주문하기</button>
+                <button id="cancel_btn" onClick={handleCancelClick}>취소하기</button>
+                <button id="r_order_btn" onClick={handleOrderClick}>주문하기</button>
             </div>
             <div className="totals">
                 <p>가격 : 원</p>
