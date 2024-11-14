@@ -1,7 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Select.css";
 
 const Select = () => {
+    const navigate = useNavigate();
+
+    const handleAgainClick = () => {
+        navigate("/order"); // Navigate to order.js
+    };
+
+    const handleAddClick = () => {
+        navigate("/order"); // Navigate to order.js
+    };
+
+    const handleOrderClick = () => {
+        navigate("/choicelist"); // Navigate to choicelist.js
+    };
+
     return (
         <div className="select_div1">
             <div className="select_div2">
@@ -12,9 +27,9 @@ const Select = () => {
             </div>
             <div className="select_btn_div1">
                 <div className="select_btn_div2">
-                    <button id="again_btn">다시 입력하기</button>
-                    <button id="add_btn">추가 주문하기</button>
-                    <button id="order_btn">주문하기</button>
+                    <button id="again_btn" onClick={handleAgainClick}>다시 입력하기</button>
+                    <button id="add_btn" onClick={handleAddClick}>추가 주문하기</button>
+                    <button id="order_btn" onClick={handleOrderClick}>선택완료</button>
                 </div>
             </div>
         </div>
