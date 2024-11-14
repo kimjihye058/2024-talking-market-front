@@ -41,12 +41,19 @@
     gap: 72px;
 }
 
-.products {
+.products1 {
     background-color: #FFF8F3;
     width: 350px;
     height: 120px;
     border-radius: 10px;
     font-family: Pretendard-SemiBold;
     margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+}
 
+.products2 {
+    color: #40200F;
+    margin: 0 3%;
+    position: relative;
 }
