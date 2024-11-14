@@ -1,7 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./AddressCheck.css";
 
 const AddressCheck = () => {
+    const navigate = useNavigate();
+
+    const handleNoClick = () => {
+        navigate("/address"); // Navigate to address.js
+    };
+
+    const handleYesClick = () => {
+        navigate("/martmap"); // Navigate to mart_map.js
+    };
 
     return (
         <div className="check">
@@ -15,11 +25,11 @@ const AddressCheck = () => {
                 <p>이 주소가 맞나요?</p>
             </div>
             <div className="button">
-                <div className="noBtn">
+                <div className="noBtn" onClick={handleNoClick}>
                     <img src="/images/noBtn.png"></img>
                     <p>아니요</p>
                 </div>
-                <div className="yesBtn">
+                <div className="yesBtn" onClick={handleYesClick}>
                     <img src="/images/yesBtn.png"></img>
                     <p>네</p>
                 </div>
