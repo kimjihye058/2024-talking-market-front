@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 /* 음성을 인식하고 있습니다 텍스트 스타일 */
@@ -110,4 +111,15 @@
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.transcript-display {
+    width: 70%;
+    font-size: 25px;
+    font-family: Pretendard-SemiBold;
+    color: gray;
+    text-align: center;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 70px;
 }
