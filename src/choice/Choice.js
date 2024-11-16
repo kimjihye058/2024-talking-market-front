@@ -1,17 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Choice.css";
 import Select from "./Select";
 
 const Choice = () => {
-    // 제품마다 개별 상태를 관리하는 배열
-    const [checkedItems, setCheckedItems] = useState([false, false]); // 각 제품마다 초기값 false
+    const navigate = useNavigate();
+    const location = useLocation();
+    const transcript = location.state?.transcript || "검색어가 없습니다."; // 전달받은 transcript 값
+
+    const [checkedItems, setCheckedItems] = useState([false, false]);
 
     const handleCheckClick = (index) => {
-        // 현재 클릭된 버튼이 이미 선택된 상태인지 확인
         const newCheckedItems = checkedItems.map((item, idx) => 
-            idx === index ? !item : false // 클릭된 버튼은 토글, 나머지는 false
+            idx === index ? !item : false
         );
         setCheckedItems(newCheckedItems);
+    };
+
+    const handleProceed = () => {
+        // AddressCheck로 transcript 값을 state로 전달하며 이동
+        navigate("/addresscheck", { state: { transcript } });
     };
 
     return (
@@ -19,7 +27,7 @@ const Choice = () => {
             <div className="title_div">
                 <span id="title_text">주문하기</span>
             </div>
-            <p id="choice_text1">'다우니 세제' 검색결과</p>
+            <p id="choice_text1">"{transcript}" 검색결과</p> {/* transcript 표시 */}
             {[0, 1].map((index) => (
                 <div className="product_div1" key={index}>
                     <img 
@@ -48,8 +56,9 @@ const Choice = () => {
                 </div>
             ))}
             <Select />
+            <button onClick={handleProceed}>주소 확인 페이지로 이동</button>
         </div>
     );
-}
+};
 
 export default Choice;

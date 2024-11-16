@@ -1,16 +1,18 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./AddressCheck.css";
 
 const AddressCheck = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const transcript = location.state?.transcript || "검색어가 없습니다."; // state로 전달된 transcript 값
 
     const handleNoClick = () => {
-        navigate("/address"); // Navigate to address.js
+        navigate("/address"); // 주소 입력 페이지로 이동
     };
 
     const handleYesClick = () => {
-        navigate("/martmap"); // Navigate to mart_map.js
+        navigate("/martmap"); // 마트 지도 페이지로 이동
     };
 
     return (
@@ -19,7 +21,7 @@ const AddressCheck = () => {
                 <span className="logo2">주소입력</span>
             </header>
             <div className="address">
-                <p>수락 리버시티 1단지<br/> 102동 501호</p>
+                <p>{transcript}</p> {/* transcript 값을 여기서 출력 */}
             </div>
             <div className="checkaddress">
                 <p>이 주소가 맞나요?</p>
