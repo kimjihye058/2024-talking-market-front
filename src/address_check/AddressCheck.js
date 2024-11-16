@@ -26,11 +26,11 @@ const AddressCheck = () => {
             </div>
             <div className="button">
                 <div className="noBtn" onClick={handleNoClick}>
-                    <img src="/images/noBtn.png"></img>
+                    <img src="/images/noBtn.png" alt="noBtn"></img>
                     <p>아니요</p>
                 </div>
                 <div className="yesBtn" onClick={handleYesClick}>
-                    <img src="/images/yesBtn.png"></img>
+                    <img src="/images/yesBtn.png" alt="yesBtn"></img>
                     <p>네</p>
                 </div>
             </div>

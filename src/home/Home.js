@@ -13,10 +13,10 @@ const Home = () => {
     return(
         <div className="Home1">
             <header className="header1">
-                <img src="/images/logo.png" className="logo_image"/><span className="logo1">말로마트</span>
+                <img src="/images/logo.png" className="logo_image" alt="logo"/><span className="logo1">말로마트</span>
             </header>
             <div className="voice1">
-                <img src="/images/voice.png" onClick={handleVoiceClick} />
+                <img src="/images/voice.png" onClick={handleVoiceClick} alt="voiceIcon"/>
                 <span className="homevoice1">아이콘을 클릭해 주세요</span>
             </div>
         </div>
