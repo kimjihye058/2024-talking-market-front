@@ -1,0 +1,30 @@
+.martMap_div1 {
+    width: 100%;
+    height: 165px;
+    position: absolute;
+    background-color: white;
+    bottom: 10%;
+    z-index: 10;
+    border-top: solid 3px #ADC178;
+    border-bottom: solid 3px #ADC178;
+}
+
+#mart_name {
+    font-family: Pretendard-SemiBold;
+    font-size: 35px;
+    color: #40200F;
+    margin: 32px 23px 0;
+}
+
+#mart_address {
+    font-family: Pretendard-Medium;
+    font-size: 17px;
+    color: #604E43;
+    margin: 5px 23px 0;
+}
+
+#mart_check_btn {
+    position: absolute;
+    right: 26px;
+    bottom: 20px;
+}
