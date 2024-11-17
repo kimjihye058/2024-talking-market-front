@@ -56,7 +56,6 @@ const Choice = () => {
                 </div>
             ))}
             <Select />
-            <button onClick={handleProceed}>주소 확인 페이지로 이동</button>
         </div>
     );
 };
