@@ -12,7 +12,9 @@ const AddressCheck = () => {
     };
 
     const handleYesClick = () => {
-        navigate("/martmap"); // 마트 지도 페이지로 이동
+        setTimeout(() => {
+            navigate("/success");
+        }, 500);
     };
 
     return (

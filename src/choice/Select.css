@@ -4,6 +4,7 @@
     position: absolute;
     bottom: 0;
     border-top: 3px solid #90A955;
+    background: white;
 }
 
 .select_div2 {
@@ -14,14 +15,14 @@
     color: #40200F;
     font-family: Pretendard-SemiBold;
     font-size: 20px;
-    
+    margin: 21px 0 0;
 }
 
 #select_product {
     color: #40200F;
     font-family: Pretendard-Medium;
     font-size: 20px;
-    margin: 0;
+    margin: 7px 0 3px;
 }
 
 #select_count {
@@ -36,12 +37,14 @@
     font-family: Pretendard-Medium;
     font-size: 20px;
     float: right;
-    margin: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 55px;
 }
 
 .select_btn_div1 {
     position: absolute;
-    bottom: 60px;
+    bottom: 70px;
     width: 100%;
 }
 

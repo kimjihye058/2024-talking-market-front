@@ -10,7 +10,7 @@ const ChoiceList = () => {
     };
 
     const handleOrderClick = () => {
-        navigate("/address"); // Navigate to address.js
+        navigate("/martmap"); // Navigate to address.js
     };
 
     return (
@@ -36,11 +36,9 @@ const ChoiceList = () => {
                     <p id="product_name">다우니 프리미엄 세탁 세제 액체형 실내건조 2.8L</p>
                     <p id="product_price">가격 : 44000원</p>
                     <div className="product_div3">
-                        <select id="product_count" name="options">
-                            {[...Array(8).keys()].map(i => (
-                                <option key={i + 1} value={i + 1}>{i + 1}</option>
-                            ))}
-                        </select>
+                        <div id="product_count2">
+                            <span id="product_count2_txt">1</span>
+                        </div>
                         <span id="count_text">개</span>
                     </div>
                 </div>

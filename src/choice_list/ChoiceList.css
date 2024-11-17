@@ -52,8 +52,25 @@
     align-items: center;
 }
 
+#product_count2{
+    width: 20%;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    align-content: center;
+}
+
 .products2 {
     color: #40200F;
     margin: 0 3%;
     position: relative;
+}
+
+#product_count2_txt {
+}
+
+.product_div3{
+    display: flex;
+    margin-right: 3px;
 }
