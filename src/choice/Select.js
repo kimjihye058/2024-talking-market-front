@@ -9,6 +9,12 @@ const Select = ({ product }) => {
         if (product) {
             console.log("선택된 제품:", product.imageUrl); // 이미지 URL 출력
         }
+
+        // localStorage에서 order_id 가져오기
+        const orderId = localStorage.getItem("order_id");
+        if (orderId) {
+            console.log("Order ID:", orderId); // order_id 출력
+        }
     }, [product]);
 
     const handleAgainClick = () => {

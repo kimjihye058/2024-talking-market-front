@@ -1,4 +1,3 @@
-// Choice.js
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Choice.css";
@@ -7,11 +6,12 @@ import Select from "./Select";
 const Choice = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const transcript = location.state?.transcript; // 기본값을 빼고 수정
+    const transcript = location.state?.transcript || '사과'; // 기본값으로 '사과' 설정
 
     const [checkedItems, setCheckedItems] = useState([]);
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    
 
     useEffect(() => {
         if (transcript) {
@@ -30,23 +30,22 @@ const Choice = () => {
     const handleCheckClick = (index) => {
         const countElement = document.querySelector(`#product_count_${index}`);
         const selectedCount = countElement ? parseInt(countElement.value, 10) : 1;
-    
+
         const newCheckedItems = checkedItems.map((item, idx) => idx === index ? !item : false);
         setCheckedItems(newCheckedItems);
-    
+
         if (newCheckedItems[index]) {
             const selected = {
                 name: products[index].name,
                 price: products[index].price,
                 imageUrl: products[index].image_url,
-                count: selectedCount, // 선택된 count 값으로 설정
+                count: selectedCount,
             };
             setSelectedProduct(selected);
         } else {
             setSelectedProduct(null);
         }
     };
-    
 
     const handleCountChange = (index, count) => {
         if (checkedItems[index]) {
@@ -63,7 +62,7 @@ const Choice = () => {
                 <span id="title_text">주문하기</span>
             </div>
             <div className="product_list">
-                <p id="choice_text1">"{transcript || '검색어 없음'}" 검색결과</p>
+                <p id="choice_text1">"{transcript}" 검색결과</p>
                 {products.length > 0 ? (
                     products.map((product, index) => (
                         <div className="product_div1" key={index}>
