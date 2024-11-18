@@ -36,15 +36,35 @@ const MartMap = () => {
                     const accuracy = position.coords.accuracy; // 위치 정확도
                     setPosition({ lat, lng: lon });
                     setAccuracy(accuracy); // 정확도 상태 업데이트
-
-                    // 정확도가 너무 낮으면 다시 위치 요청
-                    if (accuracy > 100) {
-                        console.warn("위치 정확도가 낮습니다. 다시 요청합니다.");
-                        getCurrentLocation(); // 다시 시도
-                    }
+    
+                    // 위치 좌표로 주소를 찾기 위해 Geocoder 사용
+                    const geocoder = new window.kakao.maps.services.Geocoder();
+                    const latlng = new window.kakao.maps.LatLng(lat, lon);
+    
+                    geocoder.coord2Address(latlng.getLng(), latlng.getLat(), (result, status) => {
+                        if (status === window.kakao.maps.services.Status.OK) {
+                            const address = result[0].address.address_name;
+                            console.log("현재 위치 주소: ", address); // 콘솔에 주소 출력
+                        } else {
+                            console.error("주소를 찾을 수 없습니다.");
+                        }
+                    });
                 },
                 (error) => {
                     console.error("Error occurred. Error code: " + error.code);
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            console.error("사용자가 위치 정보를 허용하지 않았습니다.");
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            console.error("위치 정보를 찾을 수 없습니다.");
+                            break;
+                        case error.TIMEOUT:
+                            console.error("위치 정보를 가져오는 데 시간이 초과되었습니다.");
+                            break;
+                        default:
+                            console.error("알 수 없는 에러가 발생했습니다.");
+                    }
                 },
                 {
                     enableHighAccuracy: true, // 정확도 높이기
@@ -56,6 +76,7 @@ const MartMap = () => {
             console.error("GeoLocation을 사용할 수 없습니다.");
         }
     };
+    
 
     // 마커 클릭 시 해당 마트의 이름과 주소를 상태에 저장
     const handleMarkerClick = (name, lat, lng) => {
@@ -85,8 +106,8 @@ const MartMap = () => {
         if (selectedMart) {  // 마트를 클릭했을 때만 이미지 클릭 가능
             setIsChecked(true);
             setTimeout(() => {
-                navigate("/success");
-            }, 1000);
+                navigate("/address");
+            }, 500);
         }
     };
 
