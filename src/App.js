@@ -4,7 +4,7 @@ import './App.css';
 import Home from "./home/Home";
 import Order from "./order/Order";
 import Choice from "./choice/Choice";
-import ChoiceList from "./choice_list/ChoiceList";
+import ChoiceList from "./choice_list/ChoiceLIst";
 import Address from "./address/Address";
 import AddressCheck from "./address_check/AddressCheck";
 import MartMap from "./mart_map/MartMap";
