@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
-import { useNavigate } from "react-router-dom"; // 페이지 이동을 위한 useNavigate
+import { useNavigate } from "react-router-dom";
 import useKakaoLoader from "./useKakaoLoader";
 import "./MartMap.css";
 
 const MartMap = () => {
     const [kakaoLoaded, setKakaoLoaded] = useState(false);
-    const [position, setPosition] = useState({ lat: 33.450701, lng: 126.570667 }); // 기본 위치 제주도
+    const [position, setPosition] = useState({ lat: 33.450701, lng: 126.570667 });
     const [accuracy, setAccuracy] = useState(null);
-    const [selectedMart, setSelectedMart] = useState(null); // 클릭한 마트의 이름을 저장하는 상태
-    const [selectedMartAddress, setSelectedMartAddress] = useState(""); // 클릭한 마트의 주소를 저장하는 상태
-    const [isChecked, setIsChecked] = useState(false); // 이미지 클릭 상태 관리
+    const [selectedMart, setSelectedMart] = useState(null);
+    const [selectedMartAddress, setSelectedMartAddress] = useState("");
+    const [isChecked, setIsChecked] = useState(false);
 
-    const navigate = useNavigate(); // 페이지 이동을 위한 navigate
+    const navigate = useNavigate();
 
-    // 마트 위치 데이터 (예시)
+    // 마트 위치 데이터
     const marts = [
         { id: 1, name: "월드할인마트", lat: 37.4688367427655, lng: 126.935315072363 },
         { id: 2, name: "제일소비자유통 고시촌점", lat: 37.4666122898112, lng: 126.936241311245 },
@@ -145,9 +145,8 @@ const MartMap = () => {
                     {accuracy && (
                         console.log(`위치 정확도 : ${accuracy}`) // 정확도 표시
                     )}
-                    {/* 마커 클릭 시 이름과 주소를 화면에 표시 */}
                     {!selectedMart ? (
-                        <p id="mart_name">마트를 클릭해 보세요</p> // 마커를 클릭하지 않았을 때 안내 텍스트 표시
+                        <p id="mart_name">마트를 클릭해 보세요</p>
                     ) : (
                         <p id="mart_name">{selectedMart}</p>
                     )}

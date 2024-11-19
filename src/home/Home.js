@@ -5,14 +5,13 @@ import "./Home.css";
 const Home = () => {
     const navigate = useNavigate();
 
-    // 클릭 시 order_id 생성 후 localStorage에 저장하는 함수
+    // 클릭 시 order_id 생성 후 localStorage에 저장
     const handleVoiceClick = () => {
-        // 고유한 order_id 생성 후 localStorage에 저장
+        // order_id 생성 후 localStorage에 저장
         const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         localStorage.setItem("order_id", orderId);
         console.log("Generated order ID:", orderId);
 
-        // 500ms 후 order 페이지로 이동
         setTimeout(() => {
             navigate("/order");
         }, 500);
