@@ -37,7 +37,7 @@ const ChoiceList = () => {
                     
                     // products 배열을 순회하며 가격과 수량을 더함
                     fetchedProducts.forEach(product => {
-                        total += product.price; // 가격 * 수량
+                        total += product.price * product.count; // 가격 * 수량
                         count += product.count; // 수량 합산
                     });
 

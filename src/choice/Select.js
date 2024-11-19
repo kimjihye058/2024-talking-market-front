@@ -58,7 +58,6 @@ const Select = ({ product }) => {
 
             if (endpoint === "/select_product") {
                 alert("상품이 성공적으로 추가되었습니다!");
-                navigate("/choicelist"); // 선택 완료 후 페이지 이동
             }
         } catch (error) {
             console.error("POST 요청 실패:", error.message);
@@ -72,7 +71,10 @@ const Select = ({ product }) => {
         sendPostRequest("/select_product");
         navigate("/order"); // 추가 주문
     };
-    const handleOrderClick = () => sendPostRequest("/select_product");
+    const handleOrderClick = () => {
+        sendPostRequest("/select_product");
+        navigate("/choicelist")
+    };
 
     return (
         <div className="select_div1">
